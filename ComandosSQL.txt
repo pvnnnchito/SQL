@@ -1,0 +1,29 @@
+SHOW VARIABLES LIKE 'validate_password%';
+
+Creamos dos usuarios, uno para local y otro remoto,
+esto es parte de administrar base de datos
+
+
+
+CREATE USER 'pvnnn'@'localhost' IDENTIFIED BY 'Admin1234';
+GRANT ALL PRIVILEGES ON *.* TO 'pvnnn'@'localhost' WITH GRANT OPTION;
+
+
+CREATE USER 'pvnnn'@'%' IDENTIFIED BY 'Admin1234';
+GRANT ALL PRIVILEGES ON *.* TO 'pvnnn'@'%' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
+
+Ingresa a MySQL con un nuevo usuario 
+
+mysql -u pvnnn -p --> pvnnn es el nombre del usuario
+
+********************************************************************
+
+Primary Key = identificador unico, no se repite 
+por lo general es numerico, auto incremental 
+
+#creacion de base de datos 
+ create database 'nombre_basededatos' 
+
+ 
